@@ -15,6 +15,16 @@ public class LoginController {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
+    @GetMapping("/login")
+    public String showLoginPage() {
+        return "login";
+    }
+
+    @GetMapping("/register")
+    public String showRegisterPage() {
+        return "register";
+    }
+
     @PostMapping("/login")
     public String login(@RequestParam String username,
                         @RequestParam String password,
@@ -29,7 +39,7 @@ public class LoginController {
             if (user != null) {
                 session.setAttribute("userId", user.getId());
                 session.setAttribute("username", user.getUsername());
-                return "dashboard";
+                return "dashboard"; // make sure dashboard.jsp exists
             } else {
                 model.addAttribute("error", "Invalid credentials");
                 return "login";

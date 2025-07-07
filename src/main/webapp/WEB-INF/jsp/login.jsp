@@ -10,7 +10,7 @@
         <input type="password" name="password" placeholder="Password" required /><br><br>
         <button type="submit">Login</button>
     </form>
-    <p><a href="register.jsp">Don't have an account? Register</a></p>
+    <p><a href="register">Dont have an account? Register</a></p>
 
     <c:if test="${not empty error}">
         <p style="color:red;">${error}</p>

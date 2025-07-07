@@ -11,7 +11,7 @@
         <button type="submit">Shorten</button>
     </form>
 
-    <p><a href="login.jsp">Login</a> | <a href="register.jsp">Register</a></p>
+    <p><a href="login">Login</a> | <a href="register">Register</a></p>
 
     <c:if test="${not empty msg}">
         <p style="color: green;">${msg}</p>

@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+##config files##
+application.properties
+pom.xml
+web.xml
